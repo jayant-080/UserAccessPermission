@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_post_feed"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/ivclosebtn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintBottom_toTopOf="@+id/iv_admin_post_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01999998" />
+
+
+    <ImageView
+        android:id="@+id/ivuploadpost"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_baseline_check_circle_24"
+        app:layout_constraintBottom_toTopOf="@+id/iv_admin_post_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01999998" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_admin_post_image"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="180dp"
+        android:background="#CDC8C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iv_choose_post_photo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_admin_post_image"
+        app:layout_constraintEnd_toEndOf="@+id/iv_admin_post_image"
+        app:layout_constraintStart_toStartOf="@+id/iv_admin_post_image"
+        app:layout_constraintTop_toTopOf="@+id/iv_admin_post_image" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_admin_feed_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_admin_post_image">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_admin_feed_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif-light"
+            android:hint="Enter title here"
+            android:inputType="text"
+            android:textColor="#000"
+            android:textColorHint="#2F40A0"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_admin_feed_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_admin_feed_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_admin_feed_desc"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:gravity="start"
+            android:padding="3dp"
+            android:maxLines="10"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif-light"
+            android:hint="Enter description here"
+            android:inputType="textMultiLine"
+            android:textColor="#000"
+            android:textColorHint="#2F40A0"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_feed_upload"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:theme="@style/AppTheme3"
+        android:max="100"
+        android:visibility="gone"
+        android:indeterminateTint="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/til_admin_feed_desc"
+        app:layout_constraintStart_toStartOf="@+id/til_admin_feed_desc"
+        app:layout_constraintTop_toBottomOf="@+id/til_admin_feed_desc"
+        tools:progress="40" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

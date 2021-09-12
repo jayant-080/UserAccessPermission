@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/admin_auth_nav_graph"
+    app:startDestination="@id/adminSigninFragment">
+
+    <fragment
+        android:id="@+id/adminSigninFragment"
+        android:name="com.jks.userrecognitionandaccesspermission.adminauthui.AdminSigninFragment"
+        android:label="AdminSigninFragment" >
+        <action
+            android:id="@+id/action_adminSigninFragment_to_adminRegisterFragment"
+            app:destination="@id/adminRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminRegisterFragment"
+        android:name="com.jks.userrecognitionandaccesspermission.adminauthui.AdminRegisterFragment"
+        android:label="AdminRegisterFragment" >
+        <action
+            android:id="@+id/action_adminRegisterFragment_to_adminSigninFragment"
+            app:destination="@id/adminSigninFragment" />
+    </fragment>
+</navigation>

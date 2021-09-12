@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/admin_main_nav_graph"
+    app:startDestination="@id/adminFeedsFragment">
+
+    <fragment
+        android:id="@+id/adminFeedsFragment"
+        android:name="com.jks.userrecognitionandaccesspermission.adminmainui.AdminFeedsFragment"
+        android:label="AdminFeedsFragment" >
+        <action
+            android:id="@+id/action_adminFeedsFragment_to_adminPostFeedFragment3"
+            app:destination="@id/adminPostFeedFragment3" />
+        <action
+            android:id="@+id/action_adminFeedsFragment_to_updateProfilePic4"
+            app:destination="@id/updateProfilePic4" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminNotificationFragment"
+        android:name="com.jks.userrecognitionandaccesspermission.adminmainui.AdminNotificationFragment"
+        android:label="AdminNotificationFragment" />
+    <fragment
+        android:id="@+id/adminLogFragment"
+        android:name="com.jks.userrecognitionandaccesspermission.adminmainui.AdminLogFragment"
+        android:label="AdminLogFragment" />
+    <fragment
+        android:id="@+id/adminPostFeedFragment3"
+        android:name="com.jks.userrecognitionandaccesspermission.adminmainui.AdminPostFeedFragment"
+        android:label="AdminPostFeedFragment" >
+        <action
+            android:id="@+id/action_adminPostFeedFragment3_to_adminFeedsFragment"
+            app:destination="@id/adminFeedsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateProfilePic4"
+        android:name="com.jks.userrecognitionandaccesspermission.sharedUi.UpdateProfilePic"
+        android:label="UpdateProfilePic" />
+</navigation>

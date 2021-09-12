@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/adminFeedsFragment"
+        android:title="Myfeeds"
+        android:icon="@drawable/ic_adminpost"
+        android:checked="true"/>
+    <item android:id="@+id/adminNotificationFragment"
+        android:icon="@drawable/ic_notification"
+        android:title="Notification"
+        />
+    <item android:id="@+id/adminLogFragment"
+        android:title="user-access"
+        android:icon="@drawable/ic_baseline_device_hub_24"
+        />
+
+</menu>
